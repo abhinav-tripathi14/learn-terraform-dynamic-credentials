@@ -10,9 +10,6 @@ data "aws_ami" "amazon_linux" {
     name   = "name"
     values = ["amzn2-ami-hvm-*-x86_64-gp2"]
   }
-  tags = {
-    name = "Dynamic_cred_ec2"
-  }
 }
 
 resource "aws_instance" "web" {
@@ -28,5 +25,8 @@ resource "aws_instance" "web" {
     echo "<html><body><div>Hello, world!</div></body></html>" > /var/www/html/index.html
     EOF
 
-  tags = var.tags
+  #tags = var.tags
+    tags = {
+    name = "Dynamic_cred_ec2"
+  }
 }
