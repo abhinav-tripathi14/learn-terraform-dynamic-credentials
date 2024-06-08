@@ -15,6 +15,7 @@ variable "tfc_hostname" {
 
 variable "tfc_organization_name" {
   type        = string
+  default     = "Test-Abhinav"
   description = "The name of your Terraform Cloud organization"
 }
 
@@ -26,6 +27,6 @@ variable "tfc_project_name" {
 
 variable "tfc_workspace_name" {
   type        = string
-  default     = "my-azure-workspace"
+  default     = "learn-terraform-dynamic-credentials-azure"
   description = "The name of the workspace that you'd like to create and connect to Azure"
 }
