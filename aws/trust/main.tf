@@ -29,8 +29,11 @@ resource "aws_iam_role" "tfc_role" {
      },
      "Action": "sts:AssumeRoleWithWebIdentity",
      "Condition": {
+       "StringEquals": {
+         "${var.tfc_hostname}:aud": "${one(aws_iam_openid_connect_provider.tfc_provider.client_id_list)}"
+       },
        "StringLike": {
-         "${var.tfc_hostname}:sub": "organization:${var.tfc_organization_name}"
+         "${var.tfc_hostname}:sub": "organization:${var.tfc_organization_name}:project:${var.tfc_project_name}:workspace:${var.tfc_workspace_name}:run_phase:*"
        }
      }
    }
@@ -40,7 +43,7 @@ EOF
 }
 
 resource "aws_iam_policy" "tfc_policy" {
-  name        = "tfc-policy"
+  name        = "tfc-policy-1"
   description = "TFC run policy"
 
   policy = <<EOF
