@@ -14,7 +14,6 @@ variable "tfc_organization_name" {
   type        = string
   description = "The name of your Terraform Cloud organization"
 }
-/*
 variable "tfc_project_name" {
   type        = string
   default     = "Default Project"
@@ -23,10 +22,9 @@ variable "tfc_project_name" {
 
 variable "tfc_workspace_name" {
   type        = string
-  default     = "learn-terraform-dynamic-credentials-1"
+  default     = "learn-terraform-dynamic-credentials-aws"
   description = "The name of the workspace that you'd like to create and connect to AWS"
 }
-*/
 variable "aws_region" {
   type        = string
   default     = "us-east-2"
