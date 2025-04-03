@@ -23,7 +23,7 @@ variable "tfc_project_name" {
 
 variable "tfc_workspace_name" {
   type        = string
-  default     = "learn-terraform-dynamic-credentials-aws"
+  default     = "learn-terraform-dynamic-credentials-1"
   description = "The name of the workspace that you'd like to create and connect to AWS"
 }
 
