@@ -29,9 +29,6 @@ resource "aws_iam_role" "tfc_role" {
      },
      "Action": "sts:AssumeRoleWithWebIdentity",
      "Condition": {
-       "StringEquals": {
-         "${var.tfc_hostname}:aud": "${one(aws_iam_openid_connect_provider.tfc_provider.client_id_list)}"
-       },
        "StringLike": {
          "${var.tfc_hostname}:sub": "organization:${var.tfc_organization_name}"
        }
