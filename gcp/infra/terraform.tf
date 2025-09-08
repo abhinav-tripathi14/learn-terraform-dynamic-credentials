@@ -7,7 +7,7 @@ terraform {
   }
   cloud {
     workspaces {
-      name = "learn-terraform-dynamic-credentials"
+      name = "learn-terraform-dynamic-credentials-gcp"
     }
   }
 }
