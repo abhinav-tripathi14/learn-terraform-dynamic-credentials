@@ -25,4 +25,5 @@ variable "gcp_zone" {
 variable "gcp_project_id" {
   type        = string
   description = "GCP project ID for all resources"
+  default = "hc-86fe4230d04344adb1990001be8"
 }
