@@ -31,3 +31,13 @@ resource "google_compute_instance" "vm_instance" {
 
   tags = var.tags
 }
+
+resource "google_storage_bucket" "hns-enabled" {
+  name          = "hns-enabled-bucket"
+  location      = "US"
+  force_destroy = true
+
+  hierarchical_namespace {
+    enabled = true
+  }
+}
