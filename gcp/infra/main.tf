@@ -37,7 +37,4 @@ resource "google_storage_bucket" "hns-enabled" {
   location      = "US"
   force_destroy = true
 
-  hierarchical_namespace {
-    enabled = true
-  }
 }
