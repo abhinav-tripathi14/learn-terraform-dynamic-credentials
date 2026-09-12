@@ -4,6 +4,9 @@ terraform {
       source  = "hashicorp/azurerm"
       version = ">= 3.44.1"
     }
+  azapi = {
+      source = "azure/azapi"
+    }
   }
   cloud {
     workspaces {
