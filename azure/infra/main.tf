@@ -72,7 +72,7 @@ resource "azurerm_cosmosdb_account" "db" {
 resource "azapi_resource" "cosmos" {
   type = "Microsoft.DocumentDB/databaseAccounts@2024-08-15"
 
-  name      = "cosmosdb-via-azapi"
+  name      = "cosmosdb-abhinav-azapi"
   parent_id = azurerm_resource_group.example.id
   location  = azurerm_resource_group.example.location
 
