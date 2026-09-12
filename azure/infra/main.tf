@@ -57,7 +57,7 @@ resource "azurerm_cosmosdb_account" "db" {
    total_throughput_limit = -1
  }
 
- local_authentication_disabled     = true
+
  public_network_access_enabled     = false
  is_virtual_network_filter_enabled = true
  access_key_metadata_writes_enabled = false
